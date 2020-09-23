@@ -9,10 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief collection of procedures to arrange data
  *
- * <Add Extended Description Here>
+ * This program includes various procedures to
+ * sort array and find several statistics.
+ * all calculation and sortind done on the array
+ * itself by pointers.
  *
  * @author Asher Baranes
  * @date Sep 2020
@@ -21,36 +24,31 @@
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Print All Statistics
  *
- * <Add Extended Description Here>
+ * This fumction return all the statistics and print them.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param <min> <minimum value>
+ * @param <max> <maximum value>
+ * @param <mean> <mean value>
+ * @param <median> <median value>
  *
- * @return <Add Return Informaiton here>
  */
 
 void print_statistics(unsigned char min, unsigned char max, unsigned char mean, unsigned char median){
-  printf("minimum: %d, maximum: %d, mean: %d, median: %d\n", min, max, mean, median);
+  printf("minimum: %d, maximum: %d, mean: %f, median: %f\n", min, max, mean, median);
 }
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Print Array Values
  *
- * <Add Extended Description Here>
+ * This function prints array values
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param <*array> <array pointer>
+ * @param <array_len> array length>
  *
- * @return <Add Return Informaiton here>
  */
  
 void print_array(unsigned char *array, unsigned int array_len){
@@ -64,16 +62,16 @@ void print_array(unsigned char *array, unsigned int array_len){
 }
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find Median Value
  *
- * <Add Extended Description Here>
+ * This Function calculates the median of an array.
+ * Themedian calculates by lookung if the length is odd or
+ * even and then look for the middle index of the array.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param <*array> <array pointer>
+ * @param <array_len> array length>
  *
- * @return <Add Return Informaiton here>
+ * @return Median Value
  */
  
 unsigned char find_median(unsigned char *array, unsigned int array_len){
@@ -91,14 +89,14 @@ unsigned char find_median(unsigned char *array, unsigned int array_len){
 }
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Find mean of and Array
  *
- * <Add Extended Description Here>
+ * This function calculates mean of an array
+ * by adding all the indexes and divide them by the
+ * length of the array.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
+ * @param <*array> <array pointer>
+ * @param <array_len> array length>
  *
  * @return <Add Return Informaiton here>
  */
@@ -112,20 +110,6 @@ unsigned char find_mean(unsigned char *array, unsigned int array_len){
   }
   return mean;
 }
-
-
-/**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
  
 unsigned char find_maximum(unsigned char *array, unsigned int array_len){
   
@@ -136,19 +120,6 @@ unsigned char find_maximum(unsigned char *array, unsigned int array_len){
   return maximum;
 
 }
-
-/**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
  
 unsigned char find_minimum(unsigned char *array, unsigned int array_len){
   
@@ -158,19 +129,6 @@ unsigned char find_minimum(unsigned char *array, unsigned int array_len){
   
   return minimum;
 }
-
-/**
- * @brief <Add Brief Description of Function Here>
- *
- * <Add Extended Description Here>
- *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
- */
  
 unsigned char sort_array(unsigned char *array, unsigned int array_len){
   
